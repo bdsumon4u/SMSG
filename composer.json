@@ -2,11 +2,15 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
+        "hotash/sidebar": "dev-master",
         "laravel/dusk": "^7.7",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
@@ -66,6 +70,12 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/**/*"
+        }
+    ]
 }

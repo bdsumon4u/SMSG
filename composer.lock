@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bd3b7adcda77148c1bb3d58d0e1dc5d",
+    "content-hash": "e81e65db34dde5c9c282a20d312d2e50",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1084,6 +1084,59 @@
                 }
             ],
             "time": "2021-10-07T12:57:01+00:00"
+        },
+        {
+            "name": "hotash/sidebar",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/hotash/sidebar",
+                "reference": "b737d265213b1eed86cde6a7cba7280f63d0ae75"
+            },
+            "require": {
+                "illuminate/cache": "^10.0",
+                "illuminate/container": "^10.0",
+                "illuminate/contracts": "^10.0",
+                "illuminate/routing": "^10.0",
+                "illuminate/support": "^10.0",
+                "illuminate/view": "^10.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hotash\\Sidebar\\SidebarServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hotash\\Sidebar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hotash.nl",
+                    "email": "patrick@maatwebsite.nl"
+                }
+            ],
+            "description": "A sidebar builder for Laravel",
+            "keywords": [
+                "acp",
+                "laravel",
+                "menu",
+                "sidebar"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -9024,7 +9077,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

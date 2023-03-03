@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Sidebar\MainSidebar;
+use App\View\Composers\SidebarCreator;
+use Hotash\Sidebar\SidebarManager;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,8 +21,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot(SidebarManager $sidebar): void
     {
-        //
+        $sidebar->register(MainSidebar::class);
+
+        View::creator('components.sidebar.secondary', SidebarCreator::class);
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\GroupController;
@@ -47,5 +48,6 @@ Route::middleware(['splade'])->group(function () {
         Route::get('/dashboard', DashboardController::class)->name('dashboard');
         Route::resource('/devices', DeviceController::class);
         Route::resource('/groups', GroupController::class);
+        Route::resource('/contacts', ContactController::class);
     });
 });

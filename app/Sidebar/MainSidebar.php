@@ -52,6 +52,7 @@ class MainSidebar implements Sidebar
             });
             $group->item('Contacts', function (Item $item) {
                 $item->weight(1);
+                $item->route('contacts.index');
                 $item->icon('
                     <svg class="w-5 h-5 mr-3 -ml-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M3 2h16.005C20.107 2 21 2.898 21 3.99v16.02c0 1.099-.893 1.99-1.995 1.99H3V2zm4 2H5v16h2V4zm2 16h10V4H9v16zm2-4a3 3 0 0 1 6 0h-6zm3-4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm8-6h2v4h-2V6zm0 6h2v4h-2v-4z"/>
@@ -60,6 +61,11 @@ class MainSidebar implements Sidebar
             });
             $group->item('Blacklist', function (Item $item) {
                 $item->weight(1);
+                $item->route('contacts.index', [
+                    'filter' => [
+                        'is_active' => false,
+                    ],
+                ]);
                 $item->icon('
                     <svg class="w-5 h-5 mr-3 -ml-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/>

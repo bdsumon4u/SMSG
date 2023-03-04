@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\GroupController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 
@@ -45,5 +46,6 @@ Route::middleware(['splade'])->group(function () {
     ])->group(function () {
         Route::get('/dashboard', DashboardController::class)->name('dashboard');
         Route::resource('/devices', DeviceController::class);
+        Route::resource('/groups', GroupController::class);
     });
 });

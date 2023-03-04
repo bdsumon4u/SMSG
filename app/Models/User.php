@@ -75,4 +75,9 @@ class User extends Authenticatable
             'cht' => 'qr',
         ]);
     }
+
+    public function groups(): HasMany
+    {
+        return $this->hasMany(Group::class);
+    }
 }

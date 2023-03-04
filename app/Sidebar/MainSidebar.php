@@ -34,6 +34,7 @@ class MainSidebar implements Sidebar
             });
             $group->item('Devices', function (Item $item) {
                 $item->weight(1);
+                $item->route('devices.index');
                 $item->icon('
                     <svg class="w-5 h-5 mr-3 -ml-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>

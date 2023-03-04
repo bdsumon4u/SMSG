@@ -67,7 +67,7 @@
                 </button>
                 <div class="flex justify-between flex-1 px-4 sm:px-6 md:px-8">
                     <div class="flex flex-1">
-                        {{-- Search Component --}}
+                        {{ $header ?? null }}
                     </div>
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
                         <div class="ml-3 relative">

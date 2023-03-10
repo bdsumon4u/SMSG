@@ -4,7 +4,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,5 +51,10 @@ Route::middleware(['splade'])->group(function () {
         Route::resource('/devices', DeviceController::class);
         Route::resource('/groups', GroupController::class);
         Route::resource('/contacts', ContactController::class);
+        Route::resource('/messages', MessageController::class);
+
+        Route::get('/sim', function (Request $request) {
+            return [1 => 'SIM 1', 2 => 'SIM 2'];
+        })->name('sim');
     });
 });

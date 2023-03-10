@@ -80,6 +80,7 @@ class MainSidebar implements Sidebar
 
             $group->item('Send', function (Item $item) {
                 $item->weight(1);
+                $item->route('messages.create');
                 $item->icon('
                     <svg class="w-5 h-5 mr-3 -ml-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14 3v2H4v13.385L5.763 17H20v-7h2v8a1 1 0 0 1-1 1H6.455L2 22.5V4a1 1 0 0 1 1-1h11zm5 0V0h2v3h3v2h-3v3h-2V5h-3V3h3z"/>
@@ -89,6 +90,7 @@ class MainSidebar implements Sidebar
 
             $group->item('History', function (Item $item) {
                 $item->weight(1);
+                $item->route('messages.index');
                 $item->icon('
                     <svg class="w-5 h-5 mr-3 -ml-1 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M5.455 15L1 18.5V3a1 1 0 0 1 1-1h15a1 1 0 0 1 1 1v12H5.455zm-.692-2H16V4H3v10.385L4.763 13zM8 17h10.237L20 18.385V8h1a1 1 0 0 1 1 1v13.5L17.545 19H9a1 1 0 0 1-1-1v-1z"/>

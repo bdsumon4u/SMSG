@@ -9,6 +9,7 @@ echo "Deploying application ..."
     # Update codebase
     # git fetch origin production
     # git reset --hard origin/production
+    git checkout -f
     git pull origin master --force
 
     # Install dependencies based on lock file

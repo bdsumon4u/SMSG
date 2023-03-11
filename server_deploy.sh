@@ -7,10 +7,10 @@ echo "Deploying application ..."
 # (php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.') || true
 (php artisan down) || true
     # Update codebase
-    # git fetch origin production
-    # git reset --hard origin/production
-    git checkout -f
-    git pull origin master --force
+    git checkout production
+    git fetch origin production
+    git reset --hard origin/production
+    git pull origin production --force
 
     # Install dependencies based on lock file
     # composer install #--no-interaction --prefer-dist --optimize-autoloader
